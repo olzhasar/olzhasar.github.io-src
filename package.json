@@ -1,0 +1,25 @@
+{
+  "name": "github-pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sass/main.scss",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/main.scss theme/static/css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olzhasar/olzhasar.github.io-src.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olzhasar/olzhasar.github.io-src/issues"
+  },
+  "homepage": "https://github.com/olzhasar/olzhasar.github.io-src#readme",
+  "devDependencies": {
+    "bulma": "^0.7.5",
+    "node-sass": "^4.12.0"
+  }
+}

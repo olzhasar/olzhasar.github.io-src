@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
+
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 AUTHOR = 'Olzhas Arystanov'
 SITENAME = 'Olzhas Arystanov'
@@ -33,3 +36,5 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+THEME = os.path.join(BASE_DIR, 'theme')
