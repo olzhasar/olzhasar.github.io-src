@@ -2,9 +2,9 @@
   "name": "github-pages",
   "version": "1.0.0",
   "description": "",
-  "main": "sass/main.scss",
+  "main": "sass/style.scss",
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url sass/main.scss theme/static/css/main.css",
+    "css-build": "node-sass --omit-source-map-url sass/style.scss theme/static/css/style.css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch"
   },

@@ -10,6 +10,16 @@ SITENAME = 'Olzhas Arystanov'
 SITEURL = ''
 
 PATH = 'content'
+STATIC_PATHS = ['projects']
+
+THEME = os.path.join(BASE_DIR, 'theme')
+
+CATEGORY_URL = '{slug}'
+CATEGORY_SAVE_AS = '{slug}.html'
+
+ARTICLE_URL = '{category}/{slug}'
+ARTICLE_SAVE_AS = '{category}/{slug}.html'
+TAG_URL = 'tag/{slug}'
 
 TIMEZONE = 'Asia/Almaty'
 
@@ -36,5 +46,3 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-
-THEME = os.path.join(BASE_DIR, 'theme')

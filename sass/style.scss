@@ -3,24 +3,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 $family-sans-serif: "Montserrat", sans-serif;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
 
-// Import only what you need from Bulma
-@import "../node_modules/bulma/sass/utilities/_all.sass";
-@import "../node_modules/bulma/sass/base/_all.sass";
-@import "../node_modules/bulma/sass/grid/columns.sass";
-@import "../node_modules/bulma/sass/elements/button.sass";
-@import "../node_modules/bulma/sass/elements/container.sass";
-@import "../node_modules/bulma/sass/elements/title.sass";
-@import "../node_modules/bulma/sass/form/_all.sass";
-@import "../node_modules/bulma/sass/components/navbar.sass";
-@import "../node_modules/bulma/sass/layout/hero.sass";
-@import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/bulma.sass";
 
 .project-card {
-  text-align: center;
   a {
     color: $text;
     font-weight: 700;
+  }
+  .image {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-top: .5rem;
   }
 }
 
@@ -64,5 +61,20 @@ canvas {
       margin-bottom: 1.5rem;
       margin-right: 0;
     }
+  }
+}
+
+.category-hero {
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  a {
+    color: $light;
+    &:hover {
+      color: $white;
+    }
+  }
+  .title {
+    color: $white;
   }
 }

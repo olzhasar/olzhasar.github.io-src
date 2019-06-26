@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
+
+{% block body %}
+<style>
+.category-hero2 {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+      ),
+    url('{{ SITE_URL }}/theme/img/projects-background.jpg');
+}
+</style>
+<nav class="navbar is-dark">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+	Olzhas Arystanov
+      </a>
+      <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+	<span></span>
+	<span></span>
+	<span></span>
+      </span>
+    </div>
+    <div id="navbarMenuHeroA" class="navbar-menu">
+      <div class="navbar-end">
+	<span class="navbar-item">
+	  <a class="button is-white is-outlined" href="https://github.com/olzhasar">
+	    <span class="icon">
+	      <i class="fab fa-github"></i>
+	    </span>
+	    <span>Check my GitHub</span>
+	  </a>
+	</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero is-info category-hero">
+
+  <div class="hero-body">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+	<ul>
+	  <li><a href="/">Home</a></li>
+	  <li class="is-active"><a href="#" aria-current="page">Projects</a></li>
+	</ul>
+      </nav>   
+      <h1 class="title">
+	{% if category == 'projects' %}
+	Portfolio
+	{% endif %}
+      </h1>
+    </div>
+  </div>
+
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      {% for article in articles %}
+      <div class="column is-half">
+	<div class="project-card">
+	  <a href="{{ article.url }}">
+	    <figure class="image is-16by9 box">
+	      <img src="{{ article.cover }}">
+	    </figure>
+	  </a>
+	  <a href="{{ article.url }}">{{ article.title }}</a>
+	  <p>
+	    {% for tag in article.tags %}
+	    <span class="tag is-dark">{{ tag.name }}</span>
+	    {% endfor %}
+	  </p>
+	</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
