@@ -12,9 +12,23 @@
 {% endblock %}
 
 {% block content %}
-<div class="columns">
+<div class="columns is-variable is-6">
+  <div class="column is-7">
+    <div class="content">
+      <h2>{{ article.summary|striptags }}</h2>
+      {{ article.content }}
+    </div>
+  </div>
   <div class="column is-5">
     <div class="columns is-multiline">
+      {% if article.contribution %}
+      <div class="column is-4">
+	<strong>Contribution:</strong>
+      </div>
+      <div class="column is-8">
+	{{ article.contribution }}
+      </div>
+      {% endif %}
       <div class="column is-4">
 	<strong>Year:</strong>
       </div>
@@ -50,18 +64,6 @@
 	<span class="tag is-dark">{{ tag.name }}</span>
 	{% endfor %}
       </div>
-      <div class="column is-4">
-	<strong>Role:</strong>
-      </div>
-      <div class="column is-8">
-	{{ article.role }}
-      </div>
-    </div>
-  </div>
-  <div class="column is-7">
-    <div class="content">
-      <p><strong>Description:</strong></p>
-      {{ article.content }}
     </div>
   </div>
 </div>
