@@ -21,6 +21,9 @@ ARTICLE_URL = '{category}/{slug}'
 ARTICLE_SAVE_AS = '{category}/{slug}.html'
 TAG_URL = 'tag/{slug}'
 
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}.html'
+
 TIMEZONE = 'Asia/Almaty'
 
 DEFAULT_LANG = 'en'
