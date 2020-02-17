@@ -7,9 +7,15 @@ $family-sans-serif: "Montserrat", sans-serif;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
+
 $box-radius: 0; 
 
 $table-cell-border-width: 0; 
+
+$footer-background-color: #111;
+$footer-color: #888;
+
+$link: #2b78a1;
 
 @import "../node_modules/bulma/bulma.sass";
 
@@ -77,6 +83,20 @@ canvas {
     }
   }
   .title {
+    color: $white;
+  }
+}
+
+.is-image-covered {
+  background: url('/theme/img/background.jpg') center center;
+  background-size: cover;
+}
+
+.breadcrumb {
+  li > a {
+    color: $white;
+  }
+  .is-active {
     color: $white;
   }
 }

@@ -2,43 +2,40 @@
 
 {% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
 
-{% block top_section %}
-<section class="hero is-medium is-primary is-bold">
+{% block header %}
+<section class="hero is-image-covered is-medium is-dark">
+  <div class="hero-head">
+    {% include "partials/navbar.html" %}
+  </div>
   <div class="hero-body">
-    <div class="container">
+    <div class="container has-text-centered">
       <h1 class="title">
-	Hello
+	Hi, I'm Olzhas Arystanov!
       </h1>
       <h2 class="subtitle">
-	My name is Olzhas Arystanov and I'm a Python Software Engineer
+	I make web applications and APIs, mainly with Django
       </h2>
-      <p>I enjoy building scalable software with Python</p>
     </div>
   </div>
 </section>
-
 {% endblock %}
 
 {% block content %}
-
-<h2 class="subtitle">My projects:</h1>
-<div class="columns is-multiline">
-  {% for article in articles %}
-  <div class="column is-half">
-    <div class="project-card">
-      <a href="{{ article.url }}">
-	<figure class="image is-16by9 box">
-	  <img src="{{ article.cover }}">
-	</figure>
-      </a>
-      <a href="{{ article.url }}">{{ article.title }}</a>
-      <p>
-	{% for tag in article.tags %}
-	<span class="tag is-dark">{{ tag.name }}</span>
-	{% endfor %}
-      </p>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8">
+	<p>
+	  <strong>Django</strong> is my framework of choice for getting job done.
+	  I also like FastAPI, Flask.
+	</p>
+      </div>
+      <div class="column is-4">
+	<p>If you want to check my projects, you can visit the <a href="">Portfolio page</a></p>
+	<br>
+	<p>You can also check my <a href="{{ GITHUB_URL }}">Github</a> or <a href="{{ STACKOVERFLOW_URL }}">Stack Overflow</a></p>
+      </div>
     </div>
   </div>
-  {% endfor %}
-</div>
+</section>
 {% endblock %}
